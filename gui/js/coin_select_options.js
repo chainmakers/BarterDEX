@@ -48,6 +48,8 @@ coin_select_options = `<optgroup label="Crytpo Coins">
       <option data-content="<img src='img/cryptologo/i0c.png' width='30px'/> I0Coin (I0C)" data-tokens="I0Coin I0C">I0C</option>
       <option data-content="<img src='img/cryptologo/iop.png' width='30px'/> Internet of People (IOP)" data-tokens="Internet of People IOP">IOP</option>
       <option data-content="<img src='img/cryptologo/inn.png' width='30px'/> Innova (INN)" data-tokens="Innova INN">INN</option>
+      <option data-content="<img src='img/cryptologo/kng.png' width='30px'/> BetKings (KNG)" data-tokens="BetKings KNG">KNG</option>
+      <option data-content="<img src='img/cryptologo/kreds.png' width='30px'/> Kreds (KREDS)" data-tokens="Kreds KREDS">KREDS</option>
       <option data-content="<img src='img/cryptologo/lbc.png' width='30px'/> LBRY Credits (LBC)" data-tokens="LBRY Credits LBC">LBC</option>
       <option data-content="<img src='img/cryptologo/ltc.png' width='30px'/> Litecoin (LTC)" data-tokens="Litecoin LTC">LTC</option>
       <option data-content="<img src='img/cryptologo/ltz.png' width='30px'/> LitecoinZ (LTZ)" data-tokens="LitecoinZ LTZ">LTZ</option>
@@ -64,19 +66,24 @@ coin_select_options = `<optgroup label="Crytpo Coins">
       <option data-content="<img src='img/cryptologo/pivx.png' width='30px'/> PIVX (PIVX)" data-tokens="PIVX">PIVX</option>
       <option data-content="<img src='img/cryptologo/pura.png' width='30px'/> Pura (PURA)" data-tokens="PURA">PURA</option>
       <option data-content="<img src='img/cryptologo/qtum.png' width='30px'/> Qtum (QTUM)" data-tokens="Qtum">QTUM</option>
+      <option data-content="<img src='img/cryptologo/rvn.png' width='30px'/> Ravencoin (RVN)" data-tokens="Ravencoin RVN">RVN</option>
       <option data-content="<img src='img/cryptologo/xre.png' width='30px'/> RevolverCoin (XRE)" data-tokens="RevolverCoin XRE">XRE</option>
       <option data-content="<img src='img/cryptologo/sxc.png' width='30px'/> Sexcoin (SXC)" data-tokens="Sexcoin SXC">SXC</option>
       <option data-content="<img src='img/cryptologo/sib.png' width='30px'/> Sibcoin (SIB)" data-tokens="Sibcoin SIB">SIB</option>
       <option data-content="<img src='img/cryptologo/smc.png' width='30px'/> SmartCoin (SMC)" data-tokens="SmartCoin SMC">SMC</option>
+      <option data-content="<img src='img/cryptologo/sng.png' width='30px'/> SnowGem (SNG)" data-tokens="SnowGem SNG">SNG</option>
       <option data-content="<img src='img/cryptologo/stak.png' width='30px'/> Straks (STAK)" data-tokens="Straks STAK">STAK</option>
       <option data-content="<img src='img/cryptologo/sys.png' width='30px'/> Syscoin (SYS)" data-tokens="Syscoin SYS">SYS</option>
       <option data-content="<img src='img/cryptologo/trc.png' width='30px'/> Terracoin (TRC)" data-tokens="Terracoin TRC">TRC</option>
+      <option data-content="<img src='img/cryptologo/ufo.png' width='30px'/> Uniform Fiscal Object (UFO)" data-tokens="Uniform Fiscal Object UFO">UFO</option>
       <option data-content="<img src='img/cryptologo/uis.png' width='30px'/> Unitus (UIS)" data-tokens="Unitus UIS">UIS</option>
       <option data-content="<img src='img/cryptologo/vtc.png' width='30px'/> Vertcoin (VTC)" data-tokens="Vertcoin VTC">VTC</option>
       <option data-content="<img src='img/cryptologo/via.png' width='30px'/> Viacoin (VIA)" data-tokens="Viacoin VIA">VIA</option>
+      <option data-content="<img src='img/cryptologo/vivo.png' width='30px'/> VIVO (VIVO)" data-tokens="VIVO VIVO">VIVO</option>
       <option data-content="<img src='img/cryptologo/vot.png' width='30px'/> VoteCoin (VOT)" data-tokens="VoteCoin VOT">VOT</option>
       <option data-content="<img src='img/cryptologo/xzc.png' width='30px'/> ZCoin (XZC)" data-tokens="ZCoin XZC">XZC</option>
       <option data-content="<img src='img/cryptologo/zcl.png' width='30px'/> ZClassic (ZCL)" data-tokens="ZClassic ZCL">ZCL</option>
+      <option data-content="<img src='img/cryptologo/zel.png' width='30px'/> Zelcash (ZEL)" data-tokens="Zelcash ZEL">ZEL</option>
       <option data-content="<img src='img/cryptologo/zer.png' width='30px'/> Zero (ZER)" data-tokens="Zero ZER">ZER</option>
       <option data-content="<img src='img/cryptologo/zet.png' width='30px'/> Zetacoin (ZET)" data-tokens="Zetacoin ZET">ZET</option>
       <option data-content="<img src='img/cryptologo/zec.png' width='30px'/> Zcash (ZEC)" data-tokens="Zcash ZEC">ZEC</option>
