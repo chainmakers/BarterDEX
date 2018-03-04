@@ -79,6 +79,10 @@ function return_coin_details(coin) {
 			coin_details.name = 'e-Gulden';
 			coin_details.explorer = 'https://chainz.cryptoid.info/efl/tx.dws?';
 			break;
+		case 'GACREDIT':
+			coin_details.name = 'GACREDIT';
+			coin_details.explorer = 'http://88.99.227.213:3001/tx/';
+			break;
 		case 'GLT':
 			coin_details.name = 'GlobalToken';
 			coin_details.explorer = 'https://explorer.globaltoken.org/tx/';
