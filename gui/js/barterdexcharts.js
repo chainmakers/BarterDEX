@@ -204,7 +204,7 @@ function UpdateDexChart(chartbase, chartrel)  {
 	var mypubkey = sessionStorage.getItem('mm_mypubkey');
 	var ajax_data = {"userpass":userpass,"method":"tradesarray","base":chartbase,"rel":chartrel,"timescale":timescal_value,"starttime":0,"endtime":0};
 	//var url = "http://5.9.253.196:7782/api/stats/";
-	var url = "http://127.0.0.1:7783";
+	var url = "http://94.130.108.82:7782";
 	console.log(ajax_data);
 
 	$.ajax({

@@ -41,7 +41,7 @@ var electrum_servers_list = {
   "VTC": [{"173.212.225.176": 50088},{"136.243.45.140": 50088}],
   "WLC": [{"electrum2.cipig.net": 10014},{"electrum1.cipig.net": 10014}],
   "ZCL": [{"electrum2.cipig.net": 10055},{"electrum1.cipig.net": 10055}],
-   "GACREDIT": [{"159.89.4.171": 10089}],
+  "GACREDIT": [{"159.89.4.171": 10089}],
   "ZEC": [{"173.212.225.176": 50032},{"136.243.45.140": 50032}]
 }
 

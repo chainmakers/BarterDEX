@@ -71,7 +71,7 @@ function return_coin_details(coin) {
 			coin_details.name = 'Dogecoin';
 			coin_details.explorer = 'http://dogechain.info/tx/';
 			break;
-        case 'DNR':
+        	case 'DNR':
 			coin_details.name = 'Denarius';
 			coin_details.explorer = 'http://denariusexplorer.org/tx/';
 			break;
