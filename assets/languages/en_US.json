@@ -87,6 +87,9 @@
   "Portfolio": {
     "portfolio_portfolio_chart": "Portfolio Chart",
     "portfolio_add_coins": "ADD COINS",
+    "portfolio_add_default_startup_coins": "Default Startup Coins",
+    "portfolio_default_startup_coins": "Default Startup Coins",
+    "portfolio_manage_coins": "MANAGE COINS",
     "exchange_set_small": "Ask",
     "exchange_goal_percent_for_your_portfolio": "Percentage goal for your portfolio",
     "portfolio_portfolio_coins": "Portfolio Coins",
@@ -146,14 +149,14 @@
     "exchange_trading_pair_coin_price_input_placeholder": "Price e.g. 0.01",
     "exchange_trading_pair_coin_volume_input_placeholder": "Amount e.g. 12.5",
     "exchange_speed_mode_settings": "Speed Mode Settings",
-    "exchange_btn_buy_caps": "Buy",
-    "exchange_btn_sell_caps": "Sell",
+    "exchange_btn_buy_caps": "BUY",
+    "exchange_btn_sell_caps": "SELL",
     "exchange_btn_trade_bot": "OFFER BOT",
     "exchange_btn_manual_trade": "MANUAL OFFER",
     "exchange_btn_portfolio": "PORTFOLIO",
     "exchange_lbl_one_max": "Max",
     "exchange_lbl_one_min": "Min",
-    "exchange_lbl_one_price_to":  "Unit Price to",
+    "exchange_lbl_one_price_to":  "Price to",
     "exchange_lbl_buy_small": "Buy",
     "exchange_lbl_sell_small": "Sell",
     "exchange_trade_with_selected_trader": "Trade with selected trader only (optional)",
@@ -163,10 +166,10 @@
     "exchange_lbl_two_min": "Min",
     "exchange_lbl_two_buy_small": "Buy",
     "exchange_lbl_two_sell_small": "Sell",
-    "exchange_lbl_amount_to": "Quantity to",
-    "exchange_dont_auto_repeat_order": "Do not auto-repeat order",
-    "exchange_enable_auto_repeat_this_trade": "Enable auto-repeat for this trade",
-    "exchange_enable_auto_repeat_coinmarketcap": "Enable auto-repeat & CoinMarketCap prices",
+    "exchange_lbl_amount_to": "Amount to",
+    "exchange_dont_auto_repeat_order": "Limit price order - Immediate",
+    "exchange_enable_auto_repeat_this_trade": "Limit price order - Good 'til canceled",
+    "exchange_enable_auto_repeat_coinmarketcap": "Enable auto-price market maker mode",
     "exchange_itll_cost_you": "Total Cost",
     "exchange_set_small": "Ask",
     "exchange_youll_get": "Amount Receiving",
@@ -185,8 +188,8 @@
     "exchange_trade_status": "Trade Status",
     "exchange_th_my_orders_base": "Base",
     "exchange_th_my_orders_rel": "Rel",
-    "exchange_th_my_orders_bid": "Bid",
-    "exchange_th_my_orders_ask": "Ask",
+    "exchange_th_my_orders_bid": "Buy",
+    "exchange_th_my_orders_ask": "Sell",
     "exchange_th_bot_list_tradebot_info": "TradeBot Info",
     "exchange_th_bot_list_progress_info": "Progress Info",
     "exchange_th_bot_list_actions": "Actions",
@@ -197,9 +200,10 @@
     "exchange_buyers_caps": "BUYERS",
     "exchange_btn_back": "BACK",
     "exchange_th_orderbook_price_in": "Price in",
-    "exchange_th_orderbook_avg_volume": "Avg. Volume",
-    "exchange_th_orderbook_depth": "Depth",
-    "exchange_th_orderbook_trader_pubkey": "Trader Pubkey",
+    "exchange_th_orderbook_avg_volume": "Avg. UTXO size",
+    "exchange_th_orderbook_max_volume": "Max UTXO size",
+    "exchange_th_orderbook_depth": "UTXO sum",
+    "exchange_th_orderbook_trader_pubkey": "Trader Pubk",
     "exchange_th_orderbook_age": "Age",
     "exchange_th_orderbook_utxos": "UTXOs",
     "exchange_th_orderbook_zcredits": "ZCredits",
@@ -284,10 +288,10 @@
     "exchange_botstatus_td_result": "Result",
     "exchange_botstatus_td_trade_attempts": "Trades Attempts",
     "exchange_botstatus_dialog_change_this_auto_traders_settings": "Change Settings for this Auto Trade",
-    "exchange_botstatus_dialog_buyselltext_buy": "Bid",
-    "exchange_botstatus_dialog_buyselltext_sell": "Ask",
-    "exchange_botstatus_dialog_buyselltext_bought": "Bid",
-    "exchange_botstatus_dialog_buyselltext_sold": "Ask",
+    "exchange_botstatus_dialog_buyselltext_buy": "Buy",
+    "exchange_botstatus_dialog_buyselltext_sell": "Sell",
+    "exchange_botstatus_dialog_buyselltext_bought": "Buy",
+    "exchange_botstatus_dialog_buyselltext_sold": "Sell",
     "exchange_botstatus_dialog_new": "New",
     "exchange_botstatus_dialog_price_to": "Price to",
     "exchange_botstatus_dialog_new_max_amount_to": "New Max Amount to",
@@ -381,7 +385,7 @@
     "zeroconf_claim_td_wait_time": "Wait Time",
     "zeroconf_info_dialog_title": "What is \"Speed Mode\"?",
     "zeroconf_info_dialog_p_01": "Use of this feature requires a security deposit, equal to or greater than the amount you wish to actively trade. This deposit is placed in a special multisig address for safe keeping. The following conditions apply",
-    "zeroconf_info_dialog_li_01": "The minimum deposit amount is 10 KMD.",
+    "zeroconf_info_dialog_li_01": "The minimum deposit amount is 10.01 KMD.",
     "zeroconf_info_dialog_li_02": "The minimum deposit period is 1 week, and the maximum period is 52 weeks.",
     "zeroconf_info_dialog_li_03": "The expiration date is permanently set and recorded within your blockchain transaction at the time of sending the deposit.",
     "zeroconf_info_dialog_li_04": "Choose your time period appropriately, as you can only reclaim your deposit after the expiration date.",
@@ -398,6 +402,19 @@
     "settings_reset_settings": "Reset Settings",
     "settings_save_settings": "Save Settings",
     "settings_toastr_settings_update_processed": "Settings update processed.",
-    "settings_toastr_title": "BarterDEX Settings"
+    "settings_toastr_title": "BarterDEX Settings",
+    "settings_charts": "Charts",
+    "settings_charts_show": "Show",
+    "settings_charts_hide": "Hide",
+    "settings_charts_desc": "Trading charts settings update will take affect next time you get back to Exchange screen. (Doesn't require app restart)"
   }
 }
+
+
+
+
+
+
+
+
+

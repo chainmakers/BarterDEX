@@ -1,39 +1,30 @@
 const electron = require('electron'),
-      app = electron.app,
-      BrowserWindow = electron.BrowserWindow,
-      path = require('path'),
-      url = require('url'),
-      os = require('os'),
-      spawn = require('child_process').spawn,
-      exec = require('child_process').exec,
-      { Menu } = require('electron'),
-      portscanner = require('portscanner'),
-      osPlatform = os.platform(),
-      fixPath = require('fix-path'),
-      ipc = require('electron').ipcMain,
-      fs = require('fs-extra'),
-      mkdirp = require('mkdirp');
+  app = electron.app,
+  BrowserWindow = electron.BrowserWindow,
+  path = require('path'),
+  url = require('url'),
+  os = require('os'),
+  spawn = require('child_process').spawn,
+  exec = require('child_process').exec,
+  { Menu } = require('electron'),
+  portscanner = require('portscanner'),
+  osPlatform = os.platform(),
+  fixPath = require('fix-path'),
+  ipc = require('electron').ipcMain,
+  fs = require('fs-extra'),
+  mkdirp = require('mkdirp'),
+  killmm = require('./ipc/killmm');
+  
+var shepherd = require('./ipc/shepherd-ipc'),
+  MNZdICOIcon;
 
+const package_json = fs.readJsonSync(path.join(__dirname, 'package.json'));
 
-var shepherd = require('./ipc/shepherd-ipc');
-const killmm = require('./ipc/killmm');
-
-const appBasicInfo = {
-  name: 'BarterDEX',
-  version: '0.8.8-rc'
-};
-
-app.setName(appBasicInfo.name);
-app.setVersion(appBasicInfo.version);
+app.setName(package_json.name);
+app.setVersion(package_json.version);
 
 if (osPlatform === 'linux') {
   process.env.ELECTRON_RUN_AS_NODE = true;
-  // console.log(process.env);
-}
-
-var MNZdICOIcon;
-
-if (os.platform() === 'linux') {
   MNZdICOIcon = path.join(__dirname, '/assets/icons/barterdex/128x128.png');
 }
 if (os.platform() === 'win32') {
@@ -47,7 +38,7 @@ let closeAppAfterLoading = false;
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
-function createWindow (status) {
+function createWindow(status) {
   require(path.join(__dirname, 'private/mainmenu'));
 
   // initialise window
@@ -85,7 +76,6 @@ function createWindow (status) {
 
   mainWindow.webContents.on('context-menu', (e, params) => { // context-menu returns params
     const { selectionText, isEditable } = params; // params obj
-
     if (isEditable) {
       editMenu.popup(mainWindow);
     } else if (selectionText && selectionText.trim() !== '') {
@@ -123,9 +113,7 @@ app.on('window-all-closed', function () {
 app.on('activate', function () {
   // On OS X it's common to re-create a window in the app when the
   // dock icon is clicked and there are no other windows open.
-  if (mainWindow === null) {
-    createWindow()
-  }
+  if (mainWindow === null) { createWindow() }
 })
 
 // In this file you can include the rest of your app's specific main process

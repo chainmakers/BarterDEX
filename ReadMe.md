@@ -5,19 +5,19 @@ The BarterDEX application created by Komodo Platform allows trading cryptocurren
  The parent project, Komodo Platform, freely provides BarterDEX technology through open-source philosophy. BarterDEX fully realizes decentralized order matching, trade clearing, and settlement. The order
 -matching aspect uses a low-level pubkey-to-pubkey messaging protocol, and the final settlement is executed through an atomic cross-chain swap. 
 
-Komodo Platform Official Site:  https://komodoplatform.com
-Komodo BarterDEX Page :  https://www.komodoplatform.com/en/technology/barterdex
-BarterDEX Whitepaper :  https://www.komodoplatform.com/en/technology/whitepapers/BarterDEX-Whitepaper-v0.4.pdf
-
+[Komodo Platform Official Site](https://komodoplatform.com)  
+[Komodo BarterDEX Page](https://komodoplatform.com/decentralized-exchange)  
+[Komodo Whitepaper](https://komodoplatform.com/wp-content/uploads/2018/03/2018-03-12-Komodo-White-Paper-Full.pdf)
 
 
 # BarterDEX App
 
 BarterDEX App includes all things required to run. You don't need to do anything else. Just use the following instructions to start using it.
 
-It has the pre-compiled `marketmaker` bundled with it. But in any case you still wish to compile `marketmaker` yourself, you ca follow these instructions:
+It has the pre-compiled `marketmaker` bundled with it. But in any case you still wish to compile `marketmaker` yourself, you can follow these instructions:
 
-https://github.com/SuperNETorg/komodo/wiki/Setting-up-Liquidity-Provider-(LP)-Node#installing-liquidity-provider-lp-node-on-ubuntudebian-system
+https://github.com/KomodoPlatform/KomodoPlatform/wiki/Compile-marketmaker-Binary-with-Static-nanomsg-in-Linux
+https://github.com/KomodoPlatform/KomodoPlatform/wiki/Compile-marketmaker-Binary-with-Static-nanomsg-in-MacOS
 
 ### Setup
 
@@ -26,12 +26,12 @@ https://github.com/SuperNETorg/komodo/wiki/Setting-up-Liquidity-Provider-(LP)-No
 - Node.js - v7.10.0 or above
 
 
-To get started follow these steps:
+To get started, follow these steps:
 ```shell
 git clone https://github.com/KomodoPlatform/BarterDEX.git
 cd BarterDEX
 git pull
-git checkout v0.8
+git checkout dev
 npm install
 npm start
 ```
@@ -43,13 +43,13 @@ To update, follow these steps:
 ```shell
 cd BarterDEX
 git pull
-git checkout v0.8
+git checkout dev
 git pull
 ```
 
 #### For end users
 
-To build the production ready app, install `electron-packager` and `electron-prebuilt` packages from npm
+To build the production-ready app, install `electron-packager` and `electron-prebuilt` packages from npm
 ```shell
 sudo npm install electron-packager -g
 sudo npm install -g electron --unsafe-perm=true
@@ -57,16 +57,14 @@ sudo npm install -g electron --unsafe-perm=true
 
 
 ### Instructions to test
-1. Start Komodo Native Wallet
-2. Start Monaize Native Wallet
-3. Wait for both Komodo and Monaize to sync 100%
-4. Start BarterDEX
-5. Select 'Monzie (MNZ) dICO' option at the login screen.
-6. Login with `passphrase` (either pre-generated or make a new one).
-7. Look for the KMD address and send KMDs to it. Once sent, it will start reflecting there in a minute.
-8. Give the maximum price that you would like to pay for MNZ. Example: 0.15
-9. Give the maximum amount of MNZ you would like to buy. Example: 19
-10. Wait and watch the MNZ balance increasing as trades happen.
+1. Start BarterDEX
+2. Login with a `passphrase` (either pre-generated or make a new one).
+3. Add the coins you want to test in Native mode or Electrum mode (electrum does not require downloading blockchain data)
+4. Fund your addresses. Once sent, it will start reflecting there in a minute.
+5. Click Exchange button to go to trading page
+5. Give the maximum price that you would like to pay for REVS. Example: 1.6
+6. Give the maximum amount of REVS you would like to buy. Example: 1
+7. Wait and watch the REVS balance increasing as trades happen.
 
 #### Report Issues
 Please feel free to test and post any bugs or issues found here: https://github.com/KomodoPlatform/BarterDEX/issues
@@ -94,9 +92,9 @@ electron-packager . --platform=darwin --arch=x64 --icon=assets/icons/barterdex/b
 ```
 
 ##### Windows
-Change directory to iguana and execute the following command to build the Windows app
+Change directory to BarterDEX and execute the following command to build the Windows app
 ```shell
-dir iguana
+dir BarterDEX
 electron-packager . --platform=win32 --arch=x64 --icon=assets/icons/barterdex/barterdex.ico --out=build/ --buildVersion=VERSION_NUMBER_HERE --ignore=assets/bin/osx --ignore=assets/bin/linux64 --overwrite
 
 # If generating 32bit desktop package
@@ -111,7 +109,7 @@ change architecture build parameter to ```--arch=x64``` for 64 bit build
 
 ## Localization Instructions
 
-BarterDEX follows langauge and country code list localization file names. Please use the following links to get more info on the standard codes for country and language codes:
+BarterDEX follows language and country code list localization file names. Please use the following links to get more info on the standard codes for country and language codes:
 
 https://datahub.io/core/language-codes
 
