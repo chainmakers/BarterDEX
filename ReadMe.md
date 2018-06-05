@@ -57,6 +57,7 @@ sudo npm install -g electron --unsafe-perm=true
 
 
 ### Instructions to test
+<<<<<<< HEAD
 1. Start BarterDEX
 2. Login with a `passphrase` (either pre-generated or make a new one).
 3. Add the coins you want to test in Native mode or Electrum mode (electrum does not require downloading blockchain data)
@@ -65,6 +66,18 @@ sudo npm install -g electron --unsafe-perm=true
 5. Give the maximum price that you would like to pay for REVS. Example: 1.6
 6. Give the maximum amount of REVS you would like to buy. Example: 1
 7. Wait and watch the REVS balance increasing as trades happen.
+=======
+1. Start Komodo Native Wallet
+2. Start Monaize Native Wallet
+3. Wait for both Komodo and Monaize to sync 100%
+4. Start BarterDEX
+5. Select 'Monaize (MNZ) dICO' option at the login screen.
+6. Login with `passphrase` (either pre-generated or make a new one).
+7. Look for the KMD address and send KMDs to it. Once sent, it will start reflecting there in a minute.
+8. Give the maximum price that you would like to pay for MNZ. Example: 0.15
+9. Give the maximum amount of MNZ you would like to buy. Example: 19
+10. Wait and watch the MNZ balance increasing as trades happen.
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32
 
 #### Report Issues
 Please feel free to test and post any bugs or issues found here: https://github.com/KomodoPlatform/BarterDEX/issues

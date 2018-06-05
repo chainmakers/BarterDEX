@@ -14,7 +14,10 @@ const electron = require('electron'),
   fixPath = require('fix-path'),
   numCPUs = require('os').cpus().length,
   killmm = require('./killmm'),
+<<<<<<< HEAD
   request = require('request'),
+=======
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32
   { ipcMain } = require('electron');
 
 var ps = require('ps-node'),
@@ -32,24 +35,33 @@ switch (osPlatform) {
     fixPath();
     BarterDEXBin = path.join(__dirname, '../assets/bin/osx/marketmaker');
     BarterDEXDir = `${process.env.HOME}/Library/Application Support/BarterDEX`;
+<<<<<<< HEAD
     CoinsDBDir = `${process.env.HOME}/Library/Application Support/BarterDEX/CoinsDB`;
     CoinsDBIconsDir = `${process.env.HOME}/Library/Application Support/BarterDEX/CoinsDB/icons`;
+=======
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32
     break;
   case "linux":
     BarterDEXBin = path.join(__dirname, '../assets/bin/linux64/marketmaker');
     BarterDEXDir = `${process.env.HOME}/.BarterDEX`;
+<<<<<<< HEAD
     CoinsDBDir = `${process.env.HOME}/.BarterDEX/CoinsDB`;
     CoinsDBIconsDir = `${process.env.HOME}/.BarterDEX/CoinsDB/icons`;
+=======
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32
     break;
   case "win32":
     BarterDEXBin = path.join(__dirname, '../assets/bin/win64/marketmaker.exe');
     BarterDEXBin = path.normalize(BarterDEXBin);
     BarterDEXDir = `${process.env.APPDATA}/BarterDEX`;
     BarterDEXDir = path.normalize(BarterDEXDir);
+<<<<<<< HEAD
     CoinsDBDir = `${process.env.APPDATA}/BarterDEX/CoinsDB`;
     CoinsDBDir = path.normalize(CoinsDBDir);
     CoinsDBIconsDir = `${process.env.APPDATA}/BarterDEX/CoinsDB/icons`;
     CoinsDBIconsDir = path.normalize(CoinsDBIconsDir);
+=======
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32
     BarterDEXIcon = path.join(__dirname, '/assets/icons/barterdex/barterdex.ico');
     break;
 }
@@ -136,12 +148,21 @@ ipcMain.on('shepherd-command', (event, arg) => {
         fs.readJson(`${BarterDEXDir}/ZeroConf_Deposit_logFile.log`)
           .then(zconf_deposit_log_file => { event.returnValue = zconf_deposit_log_file; })
           .catch(err => { console.error(err) })
+<<<<<<< HEAD
       }
       if (arg.type == 'claim') {
         fs.readJson(`${BarterDEXDir}/ZeroConf_Claim_logFile.log`)
           .then(zconf_claim_log_file => { event.returnValue = zconf_claim_log_file; })
           .catch(err => { console.error(err) })
       }
+=======
+      }
+      if (arg.type == 'claim') {
+        fs.readJson(`${BarterDEXDir}/ZeroConf_Claim_logFile.log`)
+          .then(zconf_claim_log_file => { event.returnValue = zconf_claim_log_file; })
+          .catch(err => { console.error(err) })
+      }
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32
       break;
     case 'remove_finished_swap_file':
       fs.remove(`${BarterDEXDir}/DB/SWAPS/${arg.requestid}-${arg.quoteid}.finished`)
@@ -170,8 +191,12 @@ ipcMain.on('shepherd-command', (event, arg) => {
       event.returnValue = 'reset_done';
       break;
     case 'app_info':
+<<<<<<< HEAD
       var return_app_info_data = {"app_version": app.getVersion(),"BarterDEXDir": BarterDEXDir, "CoinsDBDir": CoinsDBDir, "CoinsDBIconsDir": CoinsDBIconsDir};
       event.returnValue = return_app_info_data;
+=======
+      event.returnValue = app.getVersion();
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32
       break;
     case 'get_lang_data':
       console.log(arg.lang);
@@ -187,6 +212,7 @@ ipcMain.on('shepherd-command', (event, arg) => {
         console.log(lang_files);
         event.returnValue = lang_files;
       });
+<<<<<<< HEAD
       break;
     case 'coins_db_dl':
       console.log(arg);
@@ -216,17 +242,23 @@ ipcMain.on('shepherd-command', (event, arg) => {
       break;
     default:
       event.returnValue = 'Command not found';
+=======
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32
   }
 })
 
 
 StartMarketMaker = function (data) {
   try {
+<<<<<<< HEAD
     
     //Delete coins.json file so that BarterDEX always gets the same copy of coins.json from default file.
     //Disable this line when coinsDB feature is enabled.
     fs.unlink(BarterDEXDir + '/coins.json');
     
+=======
+    fs.unlink(BarterDEXDir + '/coins.json');
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32
     // check if marketmaker instance is already running
     portscanner.checkPortStatus(7783, '127.0.0.1', function (error, status) {
       // Status is 'open' if currently in use or 'closed' if available
@@ -384,14 +416,19 @@ function ProcessCoinsList(coins) {
       coins = coins.replace(/USERHOME/g, `${process.env.APPDATA}`);
       coins = coins.replace(/\/\./g, '/');
       coins = path.normalize(coins);
+<<<<<<< HEAD
       // coins = coins.replace(/\\/g, "\\\\");
       coins = coins.replace(/\\/g,'/');  // FIXED - ERROR on windows
+=======
+      coins = coins.replace(/\\/g, "\\\\");
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32
       break;
   }
   coins = JSON.parse(coins);
   return coins;
 
 }
+<<<<<<< HEAD
 
 
 /* Coins DB IPC calls and functions */
@@ -485,3 +522,5 @@ CoinsDBDownloadFiles = function (action_data) {
 }
 
 /* Coins DB IPC calls and functions END */
+=======
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32

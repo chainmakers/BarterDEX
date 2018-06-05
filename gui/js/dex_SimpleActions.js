@@ -214,6 +214,10 @@ $('.btn-bot_action').click(function (e) {
 
 		if (trading_options == 'disabled') {
 			if (trade_data.volume <= 0.01) {
+<<<<<<< HEAD:gui/js/simpledexactions.js
+				console.log(trade_data.volume)
+=======
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32:gui/js/dex_SimpleActions.js
 				console.log('Order is too small. Please try again.');
 				toastr.warning(`${default_lang.Exchange.exchange_toastr_order_is_too_small}`, `${default_lang.Exchange.exchange_toastr_order_title}`)
 			} else {
@@ -1593,7 +1597,7 @@ function addcoins_dialog() {
 		$('.addcoin_enable_disable_selection').html(coin_select_options);
 		$('.addcoin_enable_disable_selection').selectpicker('render');
 
-		$('.toggle_checkbox').bootstrapToggle('off');
+		$('.toggle_checkbox').bootstrapToggle();
 
 		//console.log('bot_update_settings dialog opened.')
 		//$('.btn-bot_settings_update').attr("disabled", "disabled");
@@ -1739,7 +1743,7 @@ function PortfolioTblDataFn(portfolio_tbl_data) {
 		dex_portfolio_coins_tbl_tr += '<tr>';
 		dex_portfolio_coins_tbl_tr += '<td><img src="img/cryptologo/' + val.coin.toLowerCase() + '.png" width="30px;"/> ' + coin_name + ' (' + val.coin + ')</td>';
 		//dex_portfolio_coins_tbl_tr += '<td>' + val.address + '</td>';
-		dex_portfolio_coins_tbl_tr += '<td class="porfolio_coins_list_td_amount" data-coin="' + val.coin + '" data-address="' + val.address + '">' + val.amount + '</td>';
+		dex_portfolio_coins_tbl_tr += '<td>' + val.amount + '</td>';
 		dex_portfolio_coins_tbl_tr += '<td>' + val.price + '</td>';
 		dex_portfolio_coins_tbl_tr += '<td>' + val.goal + '</td>';
 		dex_portfolio_coins_tbl_tr += '<td>' + val.goalperc + '</td>';
@@ -1764,41 +1768,8 @@ function PortfolioTblDataFn(portfolio_tbl_data) {
 		dex_portfolio_coins_tbl_tr += '</tr>';
 
 		$('.porfolio_coins_list tbody').append(dex_portfolio_coins_tbl_tr);
-
-		if (val.address.substring(0, 2) == '0x') {
-			console.log(val.address);
-			portfolio_get_eth_erc20_balance({"coin":val.coin, "address":val.address});
-		}
 	})
 };
-
-
-function portfolio_get_eth_erc20_balance(etherc20_balance_data) {
-	console.log(etherc20_balance_data);
-
-	var userpass = sessionStorage.getItem('mm_userpass');
-	var mypubkey = sessionStorage.getItem('mm_mypubkey');
-	var ajax_data = { "userpass": userpass, "method": "balance", "coin": etherc20_balance_data.coin, "address": etherc20_balance_data.address };
-	var url = "http://127.0.0.1:7783/";
-	var fName = arguments.callee.toString().match(/function ([^\(]+)/)[1]
-	console.warn(new Date().toLocaleTimeString() + " MM_CALL: " + fName);;
-	$.ajax({
-		async: true,
-		data: JSON.stringify(ajax_data),
-		dataType: 'json',
-		type: 'POST',
-		timeout: 5000, // sets timeout to 5 seconds
-		url: url
-	}).done(function (etherc20_balance_output_data) {
-		// If successful
-		console.log(etherc20_balance_output_data);
-		$('.porfolio_coins_list_td_amount[data-coin="' + etherc20_balance_data.coin + '"]').html(etherc20_balance_output_data.balance);
-
-	}).fail(function (jqXHR, textStatus, errorThrown) {
-		// If fail
-		console.log(textStatus + ': ' + errorThrown);
-	});
-}
 
 function PortfolioChartUpdate(chart_data) {
 	console.log(chart_data)
@@ -2688,7 +2659,7 @@ function CheckOrderBookFn(sig) {
 				orderbook_bids_tr += '<td onclick=setOrderPrice(' + JSON.stringify(row_trade_data) + ')>' + val.price + '</td>';
 				//orderbook_bids_tr += '<td onclick=setOrderPrice(' + JSON.stringify(row_trade_data) + ')>' + val.minvolume + '</td>';
 				orderbook_bids_tr += '<td onclick=setOrderPrice(' + JSON.stringify(row_trade_data) + ')>' + val.maxvolume + '</td>';
-				//orderbook_bids_tr += '<td onclick=setOrderPrice(' + JSON.stringify(row_trade_data) + ')>' + ((val.avevolume == 0) ? 'n/a' : val.avevolume) + '</td>';
+				orderbook_bids_tr += '<td onclick=setOrderPrice(' + JSON.stringify(row_trade_data) + ')>' + ((val.avevolume == 0) ? 'n/a' : val.avevolume) + '</td>';
 				orderbook_bids_tr += '<td onclick=setOrderPrice(' + JSON.stringify(row_trade_data) + ')>' + val.depth + '</td>';
 				//orderbook_bids_tr += '<td onclick=setOrderPrice(' + JSON.stringify(row_trade_data) + ')>' + coloraddr.firstpart + '<font style="color: #' + coloraddr.colorpart1 + '; background-color: #' + coloraddr.colorpart1 + ';">' + coloraddr.char1 + '</font><font style="color: #' + coloraddr.colorpart2 + '; background-color: #' + coloraddr.colorpart2 + ';">' + coloraddr.char2 + '</font><font style="color: #' + coloraddr.colorpart3 + '; background-color: #' + coloraddr.colorpart3 + ';">' + coloraddr.char3 + '</font>' + coloraddr.lastpart + '</td>';
 				//orderbook_bids_tr += '<td onclick=setOrderPrice(' + JSON.stringify(row_trade_data) + ')>' + val.age + '</td>';
@@ -2729,6 +2700,18 @@ function CheckOrderBookFn(sig) {
 				row_trade_data.type = 'asks';
 				//row_trade_data.totalbuy = (val.avevolume / val.price) * val.numutxos;
 				var orderbook_asks_tr = '';
+<<<<<<< HEAD:gui/js/simpledexactions.js
+				orderbook_asks_tr += '<tr ' + mytrade_true + ' onclick=setOrderPrice(' + JSON.stringify(row_trade_data) + ')>';
+				orderbook_asks_tr += '<td>' + val.price + '</td>';
+				//orderbook_asks_tr += '<td>' + val.minvolume + ' - ' + val.maxvolume + '</td>';
+				//orderbook_asks_tr += '<td>' + row_trade_data.totalbuy.toFixed(8) + '</td>';
+				orderbook_asks_tr += '<td>' + ((val.avevolume == 0) ? 'n/a' : val.avevolume) + '</td>';
+				orderbook_asks_tr += '<td>' + val.depth + '</td>';
+				orderbook_asks_tr += '<td>' + coloraddr.firstpart + '<font style="color: #' + coloraddr.colorpart1 + '; background-color: #' + coloraddr.colorpart1 + ';">' + coloraddr.char1 + '</font><font style="color: #' + coloraddr.colorpart2 + '; background-color: #' + coloraddr.colorpart2 + ';">' + coloraddr.char2 + '</font><font style="color: #' + coloraddr.colorpart3 + '; background-color: #' + coloraddr.colorpart3 + ';">' + coloraddr.char3 + '</font>' + coloraddr.lastpart + '</td>';
+				orderbook_asks_tr += '<td>' + val.age + '</td>';
+				orderbook_asks_tr += '<td>' + ((val.numutxos == 0) ? 'n/a' : val.numutxos) + '</td>';
+				orderbook_asks_tr += '<td><span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span> ' + val.zcredits.toFixed(2) + '</td>';
+=======
 				orderbook_asks_tr += '<tr ' + mytrade_true + '>';
 				orderbook_asks_tr += '<td onclick=setOrderPrice(' + JSON.stringify(row_trade_data) + ')>' + val.price + '</td>';
 				//orderbook_asks_tr += '<td onclick=setOrderPrice(' + JSON.stringify(row_trade_data) + ')>' + val.minvolume + ' - ' + val.maxvolume + '</td>';
@@ -2741,6 +2724,7 @@ function CheckOrderBookFn(sig) {
 				//orderbook_asks_tr += '<td onclick=setOrderPrice(' + JSON.stringify(row_trade_data) + ')>' + ((val.numutxos == 0) ? 'n/a' : val.numutxos) + '</td>';
 				orderbook_asks_tr += '<td onclick=setOrderPrice(' + JSON.stringify(row_trade_data) + ')><span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span> ' + val.zcredits.toFixed(2) + '</td>';
 				orderbook_asks_tr += '<td><button class="btn btn-xs" onclick=infoOrderPrice(' + JSON.stringify(row_trade_data) + ')><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></button></td>';
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32:gui/js/dex_SimpleActions.js
 				orderbook_asks_tr += '</tr>';
 				$('.orderbook_asks tbody').append(orderbook_asks_tr);
 			})
@@ -3146,7 +3130,7 @@ function coinBalanceSendFn(coin) {
 		url: url
 	}).done(function (data) {
 		console.log(JSON.stringify(data.coin));
-		//console.log(data.coin.smartaddress);
+		console.log(data.coin.smartaddress);
 		console.log(data.coin.balance);
 		console.log(data.coin.txfee);
 
@@ -3272,10 +3256,6 @@ function coinBalanceSendFn(coin) {
 		});
 		coin_balance_send_bootbox.init(function () {
 			console.log('coin_balance_send_bootbox dialog opened.')
-			if (data.coin.smartaddress.substring(0, 2) == '0x') {
-				console.log(data.coin.smartaddress);
-				send_btn_get_eth_erc20_balance({"coin":tx_coin, "address":data.coin.smartaddress});
-			}
 			$('.bot_send_action').attr("disabled", "disabled");
 
 			$('.bot_sending_coin_balance').click(function () {
@@ -3390,35 +3370,6 @@ function coinBalanceSendFn(coin) {
 
 
 		});
-	});
-}
-
-
-function send_btn_get_eth_erc20_balance(etherc20_balance_data) {
-	console.log(etherc20_balance_data);
-
-	var userpass = sessionStorage.getItem('mm_userpass');
-	var mypubkey = sessionStorage.getItem('mm_mypubkey');
-	var ajax_data = { "userpass": userpass, "method": "balance", "coin": etherc20_balance_data.coin, "address": etherc20_balance_data.address };
-	var url = "http://127.0.0.1:7783/";
-	var fName = arguments.callee.toString().match(/function ([^\(]+)/)[1]
-	console.warn(new Date().toLocaleTimeString() + " MM_CALL: " + fName);;
-	$.ajax({
-		async: true,
-		data: JSON.stringify(ajax_data),
-		dataType: 'json',
-		type: 'POST',
-		timeout: 5000, // sets timeout to 5 seconds
-		url: url
-	}).done(function (etherc20_balance_output_data) {
-		// If successful
-		console.log(etherc20_balance_output_data);
-		$('.bot_sending_coin_balance').html(etherc20_balance_output_data.balance)
-		//$('.porfolio_coins_list_td_amount[data-coin="' + etherc20_balance_data.coin + '"]').html(etherc20_balance_output_data.balance);
-
-	}).fail(function (jqXHR, textStatus, errorThrown) {
-		// If fail
-		console.log(textStatus + ': ' + errorThrown);
 	});
 }
 

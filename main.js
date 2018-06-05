@@ -13,6 +13,7 @@ const electron = require('electron'),
   ipc = require('electron').ipcMain,
   fs = require('fs-extra'),
   mkdirp = require('mkdirp'),
+<<<<<<< HEAD
   killmm = require('./ipc/killmm');
   
 var shepherd = require('./ipc/shepherd-ipc'),
@@ -22,6 +23,18 @@ const package_json = fs.readJsonSync(path.join(__dirname, 'package.json'));
 
 app.setName(package_json.name);
 app.setVersion(package_json.version);
+=======
+  killmm = require('./ipc/killmm'),
+  appBasicInfo = {
+    name: 'BarterDEX',
+    version: '1.0.0-rc'
+  };
+var shepherd = require('./ipc/shepherd-ipc'),
+  MNZdICOIcon;
+
+app.setName(appBasicInfo.name);
+app.setVersion(appBasicInfo.version);
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32
 
 if (osPlatform === 'linux') {
   process.env.ELECTRON_RUN_AS_NODE = true;

@@ -15,12 +15,15 @@ ShepherdIPC = function (data) {
 
 $(document).ready(function () {
 	BarterDEXInitLang();
+<<<<<<< HEAD
 	BarterDEX_Init_CoinsDB();
 
 	///// Get App Version from Shpepherd IPC and update App Title //////
 	var barterDEX_app_info = ShepherdIPC({ "command": "app_info" });
 	document.title = 'BarterDEX - ' + barterDEX_app_info.app_version;
 	
+=======
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32
 	setTimeout(function () {
 		var mypubkey = sessionStorage.getItem('mm_mypubkey');
 		if (mypubkey !== '739860d6114f01f8bae9e1132945c4d4523a423d97c3573b84d4caf9cb8f0c78') {

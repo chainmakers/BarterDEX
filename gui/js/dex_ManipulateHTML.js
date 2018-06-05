@@ -1,4 +1,5 @@
 /*** JS that controls the HTML and changes it***/
+<<<<<<< HEAD
 const electron = require('electron'),
 	app = electron.app,
 	BrowserWindow = electron.BrowserWindow,
@@ -6,6 +7,8 @@ const electron = require('electron'),
 	url = require('url'),
 	os = require('os'),
 	osPlatform = os.platform();
+=======
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32
 
 $(document).ready(function() {
 	document.addEventListener('drop', function(e) {
@@ -17,6 +20,7 @@ $(document).ready(function() {
 		e.stopPropagation();
 	});
 
+<<<<<<< HEAD
 	/* OS Changes - Here we change anything on the page that's OS specific 
 	This could grow enough to need its own function call, but this for now*/
 	console.log('Platform: ' + osPlatform);
@@ -35,6 +39,8 @@ $(document).ready(function() {
 	/* Because grrr */ 
 	sessionStorage.setItem('mm_chartinterval', JSON.stringify({ "periodicity": "h", "interval": 1 })); 
 	/* End Because grrr */ 
+=======
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32
 	$('.loginbody').css('height',$(window).height())
 	var mmstatus = ShepherdIPC({"command":"mmstatus"});
 	if (mmstatus !== 'closed') {

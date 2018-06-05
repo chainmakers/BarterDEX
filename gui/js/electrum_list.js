@@ -2,12 +2,20 @@ var electrum_servers_list = {
   "ARG": [{"electrum2.cipig.net":10068},{"electrum1.cipig.net":10068}],
   "BCBC": [{"bsmn0.cleanblockchain.io":50001},{"bsmn1.cleanblockchain.org":50001}],
   "BCH": [{"electrum2.cipig.net":10051},{"electrum1.cipig.net":10051}],
+<<<<<<< HEAD
   "BEER": [{"electrum2.cipig.net":10022},{"electrum1.cipig.net":10022}],
   "BET": [{"electrum2.cipig.net":10012},{"electrum1.cipig.net":10012}],
   "BLK": [{"electrum2.cipig.net":10054},{"electrum1.cipig.net":10054}],
   "BOTS": [{"electrum2.cipig.net":10007},{"electrum1.cipig.net":10007}],
   "BTC": [{"electrum2.cipig.net":10000},{"electrum1.cipig.net":10000}],
   "BTCP": [{"electrum.btcprivate.org":5222},{"electrum2.btcprivate.org":5222}],
+=======
+  "BEER": [{"electrum2.cipig.net": 10022},{"electrum1.cipig.net": 10022}],
+  "BET": [{"electrum2.cipig.net":10012},{"electrum1.cipig.net":10012}],
+  "BLK": [{"electrum2.cipig.net":10054},{"electrum1.cipig.net":10054}],
+  "BOTS": [{"electrum2.cipig.net":10007},{"electrum1.cipig.net":10007}],
+  "BTC": [{"node1.komodo.rocks":50001},{"e-x.not.fyi":50001},{"helicarrier.bauerj.eu":50001},{"electrum.hsmiths.com":50001}],
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32
   "BTCZ": [{"electrum2.cipig.net":10056},{"electrum1.cipig.net":10056}],
   "BTCH": [{"electrum2.cipig.net":10020},{"electrum1.cipig.net":10020}],
   "BTG": [{"94.130.224.11":10052},{"173.212.225.176":10052}],
@@ -19,6 +27,7 @@ var electrum_servers_list = {
   "CRYPTO": [{"electrum2.cipig.net":10008},{"electrum1.cipig.net":10008}],
   "DASH": [{"electrum2.cipig.net":10061},{"electrum1.cipig.net":10061}],
   "DEX": [{"electrum2.cipig.net":10006},{"electrum1.cipig.net":10006}],
+<<<<<<< HEAD
   "DNR": [{"144.202.95.223":50001},{"45.77.137.111":50001}],
   "DGB": [{"electrum2.cipig.net":10059},{"electrum1.cipig.net":10059}],
   "DOGE": [{"electrum2.cipig.net":10060},{"electrum1.cipig.net":10060}],
@@ -32,6 +41,19 @@ var electrum_servers_list = {
   "HODL": [{"electrum2.cipig.net":10009},{"electrum1.cipig.net":10009}],
   "HODLC": [{"hodl2.amit.systems":17989},{"hodl.amit.systems":17989}],
   "HUSH": [{"electrum2.cipig.net":10064},{"electrum1.cipig.net":10064}],
+=======
+  "DNR": [{"173.254.244.122":50002},{"173.254.244.119":50002},{"155.254.33.176":50002}],
+  "DGB": [{"136.243.45.140": 50022},{"173.212.225.176": 50022}],
+  "DOGE": [{"173.212.225.176": 50015},{"136.243.45.140": 50015}],
+  "EMC2": [{"173.212.225.176": 50079},{"136.243.45.140": 50079}],
+  "ETOMIC": [{"electrum2.cipig.net": 10025},{"electrum1.cipig.net": 10025}],
+  "FAIR": [{"173.212.225.176": 50005},{"136.243.45.140": 50005}],
+  "FJC": [{"electrumx3.fujicoin.org": 50001}, {"electrumx2.fujicoin.org": 50001}, {"electrumx1.fujicoin.org": 50001}],
+  "GRS": [{"electrum10.groestlcoin.org":50001},{"electrum11.groestlcoin.org":50001},{"electrum13.groestlcoin.org":50001},{"electrum14.groestlcoin.org":50001}],
+  "HODL": [{"electrum2.cipig.net":10009},{"electrum1.cipig.net":10009}],
+  "HODLC": [{"hodl2.amit.systems":17989},{"hodl.amit.systems":17989}],
+  "HUSH": [{"173.212.225.176": 50013},{"136.243.45.140": 50013}],
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32
   "JUMBLR": [{"electrum2.cipig.net": 10004},{"electrum1.cipig.net": 10004}],
   "KV": [{"electrum2.cipig.net":10016},{"electrum1.cipig.net":10016}],
   "KMD": [{"electrum2.cipig.net":10001},{"electrum1.cipig.net":10001}],
@@ -40,7 +62,11 @@ var electrum_servers_list = {
   "MNZ": [{"electrum2.cipig.net":10002},{"electrum1.cipig.net":10002}],
   "MONA": [{"electrum2.cipig.net":10070},{"electrum1.cipig.net":10070}],
   "MSHARK": [{"electrum2.cipig.net": 10013},{"electrum1.cipig.net": 10013}],
+<<<<<<< HEAD
   "NMC": [{"electrum2.cipig.net":10066},{"electrum1.cipig.net":10066}],
+=======
+  "NMC": [{"173.212.225.176": 50036},{"136.243.45.140": 50036}],
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32
   "OOT": [{"electrum1.utrum.io": 10088},{"electrum2.utrum.io": 10088}],
   "PANGEA": [{"electrum2.cipig.net": 10010},{"electrum1.cipig.net": 10010}],
   "PIZZA": [{"electrum2.cipig.net": 10024},{"electrum1.cipig.net": 10024}],

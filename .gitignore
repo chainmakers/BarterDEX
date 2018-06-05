@@ -1,4 +1,7 @@
 node_modules
 build
 npm-debug\.log
+<<<<<<< HEAD
 .idea
+=======
+>>>>>>> 9bbdd7a5a4a508c5e8c46575f3376c9c4f493e32
