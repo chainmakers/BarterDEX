@@ -2,3 +2,6 @@ node_modules
 build
 npm-debug\.log
 .idea
+assets/coins.json
+gui/js/coin_names.js
+gui/js/electrum_list.js
