@@ -5,3 +5,5 @@ npm-debug\.log
 assets/coins.json
 gui/js/coin_names.js
 gui/js/electrum_list.js
+gui/js/select_options_coin.js
+gui/js/coin_select_options.js
